@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23077803b0049d544bf5f15df535da71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthAmountMax: 30
+  healthAmountMax: 100
 --- !u!114 &9010325956772593210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,8 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d83214990042f84ab1f38c50b583f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
-  damage: 10
+  moveSpeed: 10
+  damage: 30
   radiusRotationSpeed: 10
   radiusRotatiionScale: 5
 --- !u!1 &3496166353158502676

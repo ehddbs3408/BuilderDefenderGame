@@ -61,6 +61,7 @@ public class EnemyWaveManager : MonoBehaviour
                         remainingEnemySpawnAmount--;
                         if (remainingEnemySpawnAmount <= 0)
                         {
+                            isBoss = false;
                             state = State.WaitingToSpawnNextWave;
                             spawnPosition = spawnPositionTransformList[UnityEngine.Random.Range(0, spawnPositionTransformList.Count)].position;
                             nextWaveSpawnPositionTransform.position = spawnPosition;
@@ -95,7 +96,7 @@ public class EnemyWaveManager : MonoBehaviour
     private void SpawnWave()
     {
         remainingEnemySpawnAmount = 5+3* waveNumber;
-        waveNumber+=5;
+        waveNumber+=1;
         OnWaveNumberChanged?.Invoke(this, EventArgs.Empty);
     }
 

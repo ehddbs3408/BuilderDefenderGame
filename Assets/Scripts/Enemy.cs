@@ -5,8 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float moveSpeed = 8f;
-    [SerializeField]
-    protected int damage = 10;
+    public int damage = 10;
 
     protected Transform targetTransform;
     protected Rigidbody2D enemyRigidbody2D;

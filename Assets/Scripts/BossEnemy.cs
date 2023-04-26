@@ -47,6 +47,7 @@ public class BossEnemy : Enemy
         {
             NormalEnemy enemy =NormalEnemy.Create(t.position);
             enemy.moveSpeed = 15;
+            enemy.damage = 30;
         }
     }
     protected override void OnCollisionEnter2D(Collision2D collision)
