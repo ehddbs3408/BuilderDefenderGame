@@ -76,8 +76,10 @@ public class EnemyWaveManager : MonoBehaviour
     {
         if (waveNumber < 10)
             NormalEnemy.Create(spawnPosition + UtilClass.GetRandomDir() * UnityEngine.Random.Range(0f, 10f));
-        else if (waveNumber < 20)
+        else if (waveNumber < 15)
             EpicEnemy.Create(spawnPosition + UtilClass.GetRandomDir() * UnityEngine.Random.Range(0f, 10f));
+        else if(waveNumber < 20)
+            RazerEnemy.Create(spawnPosition + UtilClass.GetRandomDir() * UnityEngine.Random.Range(0f, 10f));
         else
         {
             if(isBoss == false)
@@ -86,7 +88,13 @@ public class EnemyWaveManager : MonoBehaviour
                 isBoss = true;
             }
             else
-                EpicEnemy.Create(spawnPosition + UtilClass.GetRandomDir() * UnityEngine.Random.Range(0f, 10f));
+            {
+                if(remainingEnemySpawnAmount > (3 * waveNumber)/2)
+                    EpicEnemy.Create(spawnPosition + UtilClass.GetRandomDir() * UnityEngine.Random.Range(0f, 10f));
+                else
+                    RazerEnemy.Create(spawnPosition + UtilClass.GetRandomDir() * UnityEngine.Random.Range(0f, 10f));
+            }
+                
         }
              
         

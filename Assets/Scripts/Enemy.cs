@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField]
+    float targetMaxRadius = 20f;
+
     public float moveSpeed = 8f;
     public int damage = 10;
 
@@ -70,7 +73,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void HandleTargetting()
+    protected virtual void HandleTargetting()
     {
         lookForTargetTimer -= Time.deltaTime;
         if (lookForTargetTimer < 0)
@@ -93,7 +96,6 @@ public class Enemy : MonoBehaviour
 
     protected virtual void LookForTargets()
     {
-        float targetMaxRadius = 20f;
         Collider2D[] collider2DArray = Physics2D.OverlapCircleAll(transform.position, targetMaxRadius);
 
         foreach(Collider2D collider2D in collider2DArray)

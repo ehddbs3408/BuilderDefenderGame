@@ -47,6 +47,7 @@ MonoBehaviour:
   pfNormalEnemy: {fileID: 1534886281830733143, guid: fa81982f460080b41949c9ba618b175a, type: 3}
   pfEpicEnemy: {fileID: 9010325956772593211, guid: 47b97a5729de29242b01371d66afa1b6, type: 3}
   pfBossEnemy: {fileID: 5984339754163032111, guid: 2a0a40f014dc7bc409f8ead0cd2c2fda, type: 3}
+  pfRazerEnemy: {fileID: 6225624995239566496, guid: 3342ddf2ffefd5441add61e536d5329a, type: 3}
   pfEnemyDieParticles: {fileID: 4850068476918138423, guid: fa53ff3e077270e4d8a679c8fa7de07f, type: 3}
   pfArrowProjectile: {fileID: 6737508168679057526, guid: c368f1490abaee64fbb36bbaa76217e8, type: 3}
   pfBuildingDestroyedParticles: {fileID: 222898084527167713, guid: 5731055b57af76744aa0f260d9e0e788, type: 3}

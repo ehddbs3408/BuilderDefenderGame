@@ -19,6 +19,7 @@ public class GameAssets : MonoBehaviour
     public Transform pfNormalEnemy;
     public Transform pfEpicEnemy;
     public Transform pfBossEnemy;
+    public Transform pfRazerEnemy;
     public Transform pfEnemyDieParticles;
     public Transform pfArrowProjectile;
     public Transform pfBuildingDestroyedParticles;

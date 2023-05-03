@@ -11,11 +11,13 @@ public class Razer : MonoBehaviour
     private Transform arrowTrm;
     [SerializeField]
     private int damage;
+    [SerializeField]
+    private bool isEnemy = false;
 
-    public void OnRazer(Vector3 vec)
+    public void OnRazer(Vector3 vec,float length = 50)
     {
         vec = vec - razerControllerTrm.transform.position;
-        razerControllerTrm.localScale = new Vector3(50,1,1);
+        razerControllerTrm.localScale = new Vector3(length, 1,1);
 
         Vector3 referenceVec = new Vector3(1, 0, 0);
         Vector3 referenceVecRight = Vector3.Cross(Vector3.up, referenceVec);
@@ -40,10 +42,22 @@ public class Razer : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Enemy enemy = collision.GetComponent<Enemy>();
-        if (enemy != null)
+        if(isEnemy)
         {
-            enemy.GetComponent<HealthSystem>().Damage(damage);
+            Building building = collision.GetComponent<Building>();
+            if (building != null)
+            {
+                building.GetComponent<HealthSystem>().Damage(damage);
+            }
         }
+        else
+        {
+            Enemy enemy = collision.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.GetComponent<HealthSystem>().Damage(damage);
+            }
+        }
+        
     }
 }
